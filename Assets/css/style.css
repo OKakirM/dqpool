@@ -1,0 +1,142 @@
+.bg {
+  max-width: 100%;
+  background-image: url("../img/waves.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  animation: waves 1.5s ease;
+}
+
+.flex {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 35%;
+  margin: 50px 0px;
+  z-index: 0;
+
+  animation: fadein 0.5s ease;
+}
+
+.flexbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.google {
+  margin-left: -25px;
+  display: inline;
+  cursor: pointer;
+  animation: fadein 1s ease;
+  transition: 0.3s ease;
+  width: 18vw;
+}
+
+.apple {
+  display: inline;
+  cursor: pointer;
+  animation: fadein 1s ease;
+  transition: 0.3s ease;
+  width: 14vw;
+}
+
+/* Animations */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes waves {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navLinks {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+ul li:nth-child(1) {
+  animation: navbar 0.3s ease;
+}
+ul li:nth-child(2) {
+  animation: navbar 0.6s ease;
+}
+ul li:nth-child(3) {
+  animation: navbar 0.9s ease;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 80%;
+  }
+
+  .flexbutton {
+    flex-direction: column;
+  }
+
+  .google {
+    display: inline;
+    cursor: pointer;
+    animation: fadein 1s ease;
+    transition: 0.3s ease;
+    width: 50vw;
+    margin-left: 0px;
+  }
+
+  .apple {
+    display: inline;
+    cursor: pointer;
+    animation: fadein 1s ease;
+    transition: 0.3s ease;
+    width: 44vw;
+  }
+
+  .bg {
+    background-size: cover;
+  }
+}
